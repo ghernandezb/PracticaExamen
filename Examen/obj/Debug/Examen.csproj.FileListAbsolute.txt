@@ -1,0 +1,18 @@
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\obj\Debug\Examen.csprojResolveAssemblyReference.cache
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\bin\Debug\Examen.exe.config
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\bin\Debug\Examen.exe
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\bin\Debug\Examen.pdb
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\obj\Debug\Examen.exe
+C:\Users\Discovery XP\Desktop\CODES\Clase03\Examen\Examen\obj\Debug\Examen.pdb
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\obj\Debug\Examen.csprojResolveAssemblyReference.cache
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\obj\Debug\Examen.exe
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\obj\Debug\Examen.pdb
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\bin\Debug\Examen.exe.config
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\bin\Debug\Examen.exe
+C:\Users\gabri\Documents\CLASES VICTOR\Examen\Examen\bin\Debug\Examen.pdb
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\bin\Debug\Examen.exe.config
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\bin\Debug\Examen.exe
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\bin\Debug\Examen.pdb
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\obj\Debug\Examen.csprojResolveAssemblyReference.cache
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\obj\Debug\Examen.exe
+C:\Users\g.hernandez.bermudez\Downloads\Examen\Examen\Examen\obj\Debug\Examen.pdb
