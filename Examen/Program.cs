@@ -40,7 +40,7 @@ namespace Examen
                 {
                     string respuestaTemp = Console.ReadLine();
 
-                    valido = (Int32.TryParse(respuestaTemp, out int parsedInt)) && ((parsedInt >= 1) && (parsedInt <= 4));
+                    valido = (VerificarSiCambiaNum(respuestaTemp)) && (VerificarNumIngresado(respuestaTemp, 1, 4));
 
                     if (!valido)
                     {
@@ -104,6 +104,21 @@ namespace Examen
             examen.Preguntas.Add(new Pregunta("Hasta donde se lava la cara un calvo?", 0, new string[] { "Donde desee", "Hasta la nuca", "Hasta arriba de las cejas", "Hasta donde diga el Mago Oscuro" }));
             examen.Preguntas.Add(new Pregunta("Que sucederia si Pinocho dijera: 'Ahora mi nariz crecera'?", 3, new string[] { "El universo implosiona", "Muere un gato", "Este programa se cae", "Solo el Mago Oscuro lo sabe" }));
             return examen;
+        }
+
+        bool VerificarSiCambiaNum(string datoIngresado)
+        {
+            //Esta funcion se encargara de verificar si lo ingresado por
+            //el usuario puede transformarse en un numero entero
+            return Int32.TryParse(datoIngresado, out int x);
+        }
+
+        bool VerificarNumIngresado(string datoIngresado, int numeroCompararA, int numCompararB)
+        {
+            //Esta funcion se encargara de verificar el numero ingresado por
+            //el usuario y la longitud del mismo
+            int x = Int32.Parse(datoIngresado);
+            return (x >= numeroCompararA) && (x <= numCompararB);
         }
     }
 
