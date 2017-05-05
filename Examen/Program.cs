@@ -106,14 +106,14 @@ namespace Examen
             return examen;
         }
 
-        bool VerificarSiCambiaNum(string datoIngresado)
+        static bool VerificarSiCambiaNum(string datoIngresado)
         {
             //Esta funcion se encargara de verificar si lo ingresado por
             //el usuario puede transformarse en un numero entero
             return Int32.TryParse(datoIngresado, out int x);
         }
 
-        bool VerificarNumIngresado(string datoIngresado, int numeroCompararA, int numCompararB)
+        static bool VerificarNumIngresado(string datoIngresado, int numeroCompararA, int numCompararB)
         {
             //Esta funcion se encargara de verificar el numero ingresado por
             //el usuario y la longitud del mismo
