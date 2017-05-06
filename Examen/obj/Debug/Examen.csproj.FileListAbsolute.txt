@@ -28,3 +28,9 @@ C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\obj\Debug\Examen.pd
 C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.exe.config
 C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.exe
 C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.pdb
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.exe.config
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.exe
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.pdb
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\obj\Debug\Examen.csprojResolveAssemblyReference.cache
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\obj\Debug\Examen.exe
+C:\Users\Discovery XP\Documents\GitHub\PracticaExamen\Examen\obj\Debug\Examen.pdb

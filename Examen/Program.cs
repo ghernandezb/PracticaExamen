@@ -11,7 +11,7 @@ namespace Examen
         static void Main(string[] args)
         {
             Examen examen = InicializarElExamen();
-            //bool valido = false;
+            bool valido = false;
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("Fecha: " + examen.Fecha);
@@ -25,9 +25,7 @@ namespace Examen
 
             Console.WriteLine("");
 
-            //****************************************************************************
-            //                              IMPRESION PREGUNTAS
-            //****************************************************************************
+            //*****************************IMPRESION PREGUNTAS************************
 
             for (int i = 0; i < examen.Preguntas.Count; i++)
             {
@@ -37,19 +35,16 @@ namespace Examen
                     Console.WriteLine((j + 1) + ". " + examen.Preguntas[i].Opciones[j]);
                 }
 
-                //****************************************************************************
-                //                      INICIO VERIFICACION DE CARACTERES
-                //****************************************************************************
+                //**********************INICIO VERIFICACION DE CARACTERES********************3
+                valido = false;
 
-                bool valido1 = false;
-
-                while (!valido1)
+                while (!valido)
                 {
                     string respuestaTemp = Console.ReadLine();
 
-                    valido1 = (VerificarSiCambiaNum(respuestaTemp)) && (VerificarNumIngresado(respuestaTemp, 1, 4));
+                    valido = (VerificarSiCambiaNum(respuestaTemp)) && (VerificarNumIngresado(respuestaTemp, 1, 4));
 
-                    if (!valido1)
+                    if (!valido)
                     {
                         Console.WriteLine("Respuesta incorrecta, '" + respuestaTemp + "' no es una respuesta dentro del rango, por favor ingrese un numero del 1 al 4.");
                     }
@@ -63,9 +58,7 @@ namespace Examen
                 Console.WriteLine("");
             }
 
-            //****************************************************************************
-            //                           IMPRESION CALIFICACION
-            //****************************************************************************
+            //*******************************IMPRESION CALIFICACION**************************
 
             float final = examen.Calificar();
             
@@ -84,9 +77,7 @@ namespace Examen
                 Console.WriteLine("Desafortunadamente, su calificacion es de " + final + " puntos. Debera repetir el examen.");
             }
 
-            //****************************************************************************
-            //                          SEGUNDA PARTE EXAMEN
-            //****************************************************************************
+            //***************************SEGUNDA PARTE EXAMEN***************************
 
             Console.WriteLine("");
             Console.WriteLine("Que desea hacer?");
@@ -94,15 +85,15 @@ namespace Examen
             Console.WriteLine("2. Salir del programa");
             Console.WriteLine("");
 
-            bool valido2 = false;
+            valido = false;
 
-            while (!valido2)
+            while (!valido)
             {
                 string respuestaSegundaParte = Console.ReadLine();
 
-                valido2 = (VerificarSiCambiaNum(respuestaSegundaParte)) && (VerificarNumIngresado(respuestaSegundaParte, 1, 2));
+                valido = (VerificarSiCambiaNum(respuestaSegundaParte)) && (VerificarNumIngresado(respuestaSegundaParte, 1, 2));
 
-                if (!valido2)
+                if (!valido)
                 {
                     Console.WriteLine("Opcion invalida, '" + respuestaSegundaParte + "' no es una opcion, por favor ingrese un numero del 1 al 2.");
                 }
@@ -116,8 +107,8 @@ namespace Examen
                             int opcionMas1;
                             Console.WriteLine(examen.Preguntas[g].Texto);
                             Console.WriteLine("Respuesta Correcta:");
-                            opcionMas1 = examen.Preguntas[g].OpcionCorrecta_get() + 1;
-                            Console.WriteLine(opcionMas1 + ". " + examen.Preguntas[g].Opciones[examen.Preguntas[g].OpcionCorrecta_get()]);
+                            opcionMas1 = examen.Preguntas[g].OpcionCorrecta + 1;
+                            Console.WriteLine(opcionMas1 + ". " + examen.Preguntas[g].Opciones[examen.Preguntas[g].OpcionCorrecta]);
                             Console.WriteLine("Respuesta Seleccionada:");
                             opcionMas1 = examen.Preguntas[g].OpcioneSeleccionada + 1;
                             Console.WriteLine(opcionMas1 + ". " + examen.Preguntas[g].Opciones[examen.Preguntas[g].OpcioneSeleccionada]);
@@ -130,9 +121,7 @@ namespace Examen
             }
         }
 
-        //****************************************************************************
-        //                          INICIALIZAR EXAMEN
-        //****************************************************************************
+        //**************************INICIALIZAR EXAMEN******************************
 
         static Examen InicializarElExamen()
         {
@@ -159,10 +148,7 @@ namespace Examen
             return examen;
         }
 
-        //****************************************************************************
-        //                       FUNCIONES DE VERIFICACION
-        //****************************************************************************
-        //Por que solo static funciona?????
+        //***********************FUNCIONES DE VERIFICACION******************************
 
         static bool VerificarSiCambiaNum(string datoIngresado)
         {

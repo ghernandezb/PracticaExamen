@@ -12,10 +12,7 @@ namespace Examen
 
         public int OpcioneSeleccionada { get; set; }
 
-        public int OpcionCorrecta_get()
-        {
-            return this._opcionCorrecta;
-        }
+        public int OpcionCorrecta { get; private set; }
 
         public string[] Opciones
         {
@@ -25,8 +22,6 @@ namespace Examen
             }
         }
 
-        private int _opcionCorrecta; //Guion bajo cuando es variable privada
-
         private string[] _opciones;
 
         public Pregunta(string texto, int opcionCorrecta, string[] opciones)//Constructor se llama igual a la clase
@@ -35,7 +30,7 @@ namespace Examen
             _opciones = opciones;
             if(opcionCorrecta >= 0 && opcionCorrecta < _opciones.Count())
             {
-                _opcionCorrecta = opcionCorrecta;
+                OpcionCorrecta = opcionCorrecta;
             } else
             {
                 throw new Exception("Opcion correcta no se encuentra en opciones.");
@@ -44,7 +39,7 @@ namespace Examen
 
         public bool Validar()
         {
-            return OpcioneSeleccionada == _opcionCorrecta;
+            return OpcioneSeleccionada == OpcionCorrecta;
         }
 
     }
