@@ -102,16 +102,24 @@ namespace Examen
                     if (Int32.Parse(respuestaSegundaParte) == 1)
                     {
                         //********* IMPRESION PREGUNTAS Y RESPUESTAS SELECCIONADAS******
-                        for (int g = 0; g < examen.Preguntas.Count; g++)
+                        for (int i = 0; i < examen.Preguntas.Count; i++)
                         {
-                            int opcionMas1;
-                            Console.WriteLine(examen.Preguntas[g].Texto);
-                            Console.WriteLine("Respuesta Correcta:");
-                            opcionMas1 = examen.Preguntas[g].OpcionCorrecta + 1;
-                            Console.WriteLine(opcionMas1 + ". " + examen.Preguntas[g].Opciones[examen.Preguntas[g].OpcionCorrecta]);
-                            Console.WriteLine("Respuesta Seleccionada:");
-                            opcionMas1 = examen.Preguntas[g].OpcioneSeleccionada + 1;
-                            Console.WriteLine(opcionMas1 + ". " + examen.Preguntas[g].Opciones[examen.Preguntas[g].OpcioneSeleccionada]);
+                            Console.WriteLine(examen.Preguntas[i].Texto);
+
+                            for (int j = 0; j < examen.Preguntas[i].Opciones.Count(); j++)
+                            {
+                                if (j == examen.Preguntas[i].OpcionCorrecta)
+                                {
+                                    Console.WriteLine((j + 1) + ". " + examen.Preguntas[i].Opciones[j] + " [" + Convert.ToChar(0x2713) + "]");
+                                }else if(examen.Preguntas[i].OpcionCorrecta != examen.Preguntas[i].OpcioneSeleccionada && j == examen.Preguntas[i].OpcioneSeleccionada)
+                                {
+                                    Console.WriteLine((j + 1) + ". " + examen.Preguntas[i].Opciones[j] + " [X]");
+                                }
+                                else
+                                {
+                                    Console.WriteLine((j + 1) + ". " + examen.Preguntas[i].Opciones[j]);
+                                }
+                            }
                             Console.WriteLine("");
                         }
                         Console.WriteLine("Presione cualquier tecla para finalizar.");
