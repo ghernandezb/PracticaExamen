@@ -42,21 +42,16 @@ namespace Examen
                 {
                     string respuestaTemp = Console.ReadLine();
 
-                    valido = (VerificarSiCambiaNum(respuestaTemp)) && (VerificarNumIngresado(respuestaTemp, 1, 4));
-
-                    if (string.IsNullOrEmpty(respuestaTemp))
-                    {
-                        valido = true;
-                        respuestaTemp = "6";
-                    }
+                    int opcion = 0;
+                    valido = string.IsNullOrEmpty(respuestaTemp) || (int.TryParse(respuestaTemp, out opcion) && (VerificarNumIngresado(opcion, 1, examen.Preguntas[i].Opciones.Length)));
 
                     if (!valido)
                     {
-                        Console.WriteLine("Respuesta incorrecta, '" + respuestaTemp + "' no es una respuesta dentro del rango, por favor ingrese un numero del 1 al 4.");
+                        Console.WriteLine("Respuesta incorrecta, '" + respuestaTemp + "' no es una respuesta dentro del rango, por favor ingrese un numero del 1 al " + examen.Preguntas[i].Opciones.Length + ".");
                     }
                     else
                     {
-                        int z = int.Parse(respuestaTemp);
+                        int z = opcion;
                         examen.Preguntas[i].OpcioneSeleccionada = (z-1);
                     }
                 }                
@@ -67,19 +62,17 @@ namespace Examen
             //*******************************IMPRESION CALIFICACION**************************
 
             float final = examen.Calificar();
-            
+
+            Console.WriteLine("");
+            Console.WriteLine("__________________________________________");
+            Console.WriteLine("");
+
             if (final >= examen.NotaMinima)
             {
-                Console.WriteLine("");
-                Console.WriteLine("__________________________________________");
-                Console.WriteLine("");
                 Console.WriteLine("Felicidades! Su calificacion es de " + final + " puntos.");
             }
             else
             {
-                Console.WriteLine("");
-                Console.WriteLine("__________________________________________");
-                Console.WriteLine("");
                 Console.WriteLine("Desafortunadamente, su calificacion es de " + final + " puntos. Debera repetir el examen.");
             }
 
@@ -97,7 +90,8 @@ namespace Examen
             {
                 string respuestaSegundaParte = Console.ReadLine();
 
-                valido = (VerificarSiCambiaNum(respuestaSegundaParte)) && (VerificarNumIngresado(respuestaSegundaParte, 1, 2));
+                int opcion = 0;
+                valido = int.TryParse(respuestaSegundaParte, out opcion) && VerificarNumIngresado(opcion, 1, 2);
 
                 if (!valido)
                 {
@@ -105,12 +99,12 @@ namespace Examen
                 }
                 else
                 {
-                    if (Int32.Parse(respuestaSegundaParte) == 1)
+                    if (opcion == 1)
                     {
                         //********* IMPRESION PREGUNTAS Y RESPUESTAS SELECCIONADAS******
                         for (int i = 0; i < examen.Preguntas.Count; i++)
                         {
-                            if (examen.Preguntas[i].OpcioneSeleccionada == 5)
+                            if (examen.Preguntas[i].OpcioneSeleccionada == -1)
                             {
                                 Console.WriteLine(examen.Preguntas[i].Texto + "  [N/A]");
                             }else
@@ -169,20 +163,9 @@ namespace Examen
         }
 
         //***********************FUNCIONES DE VERIFICACION******************************
-
-        static bool VerificarSiCambiaNum(string datoIngresado)
+        static bool VerificarNumIngresado(int datoIngresado, int numeroCompararA, int numCompararB)
         {
-            //Esta funcion se encargara de verificar si lo ingresado por
-            //el usuario puede transformarse en un numero entero
-            return Int32.TryParse(datoIngresado, out int x);
-        }
-
-        static bool VerificarNumIngresado(string datoIngresado, int numeroCompararA, int numCompararB)
-        {
-            //Esta funcion se encargara de verificar el numero ingresado por
-            //el usuario y la longitud del mismo
-            int x = Int32.Parse(datoIngresado);
-            return (x >= numeroCompararA) && (x <= numCompararB);
+            return (datoIngresado >= numeroCompararA) && (datoIngresado <= numCompararB);
         }
     }
 
