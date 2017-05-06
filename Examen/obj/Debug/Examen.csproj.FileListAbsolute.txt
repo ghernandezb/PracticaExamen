@@ -22,3 +22,9 @@ C:\Users\g.hernandez.bermudez\Documents\GitHub\PracticaExamen\Examen\obj\Debug\E
 C:\Users\g.hernandez.bermudez\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.exe.config
 C:\Users\g.hernandez.bermudez\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.exe
 C:\Users\g.hernandez.bermudez\Documents\GitHub\PracticaExamen\Examen\bin\Debug\Examen.pdb
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\obj\Debug\Examen.csprojResolveAssemblyReference.cache
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\obj\Debug\Examen.exe
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\obj\Debug\Examen.pdb
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.exe.config
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.exe
+C:\Users\gabri\Documents\CLASES VICTOR\PracticaExamen\Examen\bin\Debug\Examen.pdb

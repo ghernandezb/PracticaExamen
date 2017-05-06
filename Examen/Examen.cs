@@ -10,21 +10,9 @@ namespace Examen
     {
         //Nombre
         public string Nombre {get; private set; } //Propiedad siempre para get y set
+
+        //Nota minima para aprobar
         public int NotaMinima { get; private set; }
-
-
-        /*  FORMA LARGA PARA EDICION
-        private string nombre;
-        public string Nombre 
-        {
-            get {
-                return nombre;
-            }
-            private set
-            {
-                nombre = value;
-            }
-        } */
 
         //Fecha
         public DateTime Fecha { get; private set; }

@@ -12,6 +12,11 @@ namespace Examen
 
         public int OpcioneSeleccionada { get; set; }
 
+        public int OpcionCorrecta_get()
+        {
+            return this._opcionCorrecta;
+        }
+
         public string[] Opciones
         {
             get
