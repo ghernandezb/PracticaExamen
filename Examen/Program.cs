@@ -44,6 +44,12 @@ namespace Examen
 
                     valido = (VerificarSiCambiaNum(respuestaTemp)) && (VerificarNumIngresado(respuestaTemp, 1, 4));
 
+                    if (string.IsNullOrEmpty(respuestaTemp))
+                    {
+                        valido = true;
+                        respuestaTemp = "6";
+                    }
+
                     if (!valido)
                     {
                         Console.WriteLine("Respuesta incorrecta, '" + respuestaTemp + "' no es una respuesta dentro del rango, por favor ingrese un numero del 1 al 4.");
@@ -104,7 +110,13 @@ namespace Examen
                         //********* IMPRESION PREGUNTAS Y RESPUESTAS SELECCIONADAS******
                         for (int i = 0; i < examen.Preguntas.Count; i++)
                         {
-                            Console.WriteLine(examen.Preguntas[i].Texto);
+                            if (examen.Preguntas[i].OpcioneSeleccionada == 5)
+                            {
+                                Console.WriteLine(examen.Preguntas[i].Texto + "  [N/A]");
+                            }else
+                            {
+                                Console.WriteLine(examen.Preguntas[i].Texto);
+                            }
 
                             for (int j = 0; j < examen.Preguntas[i].Opciones.Count(); j++)
                             {
@@ -142,7 +154,7 @@ namespace Examen
             examen.Instrucciones.Add("");
             examen.Instrucciones.Add("1. Mandese valiente.");
             examen.Instrucciones.Add("2. Lea todas las instrucciones.");
-            examen.Instrucciones.Add("3. Si desconoce una respuesta digite cualquiera.");
+            examen.Instrucciones.Add("3. Si desconoce una respuesta presione ENTER para continuar, esta pregunta quedara sin respuesta.");
             examen.Instrucciones.Add("");
             examen.Instrucciones.Add("________________________________________________");
             examen.Instrucciones.Add("");
